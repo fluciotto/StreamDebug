@@ -11,8 +11,8 @@ class StreamDebug {
 		void println(const char* level, const char* format, va_list args);
 	public:
 		enum LEVEL { DEBUG, INFO, WARNING, ERROR };
-		Debug(Stream* stream);
-		Debug(Stream* stream, std::function<char*(char*)> f);
+		StreamDebug(Stream* stream);
+		StreamDebug(Stream* stream, std::function<char*(char*)> f);
 		void setPrefixFunction(std::function<char*(char*)> f);
 		void d(const char* format, ...);
 		void i(const char* format, ...);
